@@ -5,14 +5,8 @@ use_cases:
   - name: terraform
     groups:
     - name: application
-      technologies: [pipeline]
+      technologies: [terraform]
       vars:
-      - name: Team
-        description: The team responsible for this environment
-        key: resource_team
-        widget: dropdown
-        type: string
-        values: ["Team A", "Team B", "Team C"]
       - name: Environment
         description: The environment to filter resources by
         key: resource_env
@@ -30,16 +24,16 @@ use_cases:
           filters:
             environment: ${resource_env}
 
-      - name: Data source
-        key: data_source
+      - name: Team
+        description: The team responsible for this environment
+        key: team
         widget: dropdown
         type: string
-        values: ["users", "teams"]
-        default: "users"
-      - name: Chosen data
-        description: "The chosen item from the subset of mock data"
-        key: chosen_data
+        values_ref: https://robertparkin.github.io/data/teams.json
+      - name: User
+        description: The user responsible for this environment
+        key: user
         widget: auto_complete
         type: string
-        values_ref: https://robertparkin.github.io/data/${data_source}.json
+        values_ref: https://robertparkin.github.io/data/users_${team}.json
         required: true
