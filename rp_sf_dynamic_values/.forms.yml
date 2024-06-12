@@ -37,3 +37,17 @@ use_cases:
         type: string
         values_ref: https://robertparkin.github.io/data/users_${team}.json
         required: true
+
+      - name: Size range
+        description: The size range needed for the resources
+        key: size_range
+        widget: dropdown
+        type: string
+        values: ["small", "big"]
+      - name: Size
+        description: The needed resource size
+        key: size
+        widget: slider_list
+        type: map
+        values_ref: https://robertparkin.github.io/data/sizes_${size_range}.json
+        required: true
