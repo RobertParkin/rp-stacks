@@ -48,6 +48,6 @@ use_cases:
         description: The needed resource size
         key: size
         widget: slider_list
-        type: map
+        type: string
         values_ref: https://robertparkin.github.io/data/sizes_${size_range}.json
         required: true
