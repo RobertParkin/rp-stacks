@@ -51,3 +51,15 @@ use_cases:
         type: string
         values_ref: https://robertparkin.github.io/data/sizes_${size_range}.json
         required: true
+        
+      - name: "conditions source"
+        key: test
+        widget: dropdown
+        type: string
+        values: ["foo", "bar"]
+        default: foo
+      - name: "conditions"
+        key: conds
+        widget: dropdown
+        type: string
+        values_ref: https://robertparkin.github.io/data/dynamic_options.json
