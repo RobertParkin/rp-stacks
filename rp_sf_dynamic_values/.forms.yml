@@ -47,7 +47,7 @@ use_cases:
       - name: Size
         description: The needed resource size
         key: size
-        widget: slider_list
+        widget: radios
         type: string
         values_ref: https://robertparkin.github.io/data/sizes_${size_range}.json
         required: true
