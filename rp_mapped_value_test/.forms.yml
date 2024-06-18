@@ -1,0 +1,21 @@
+
+# Use the latest version 2 of the Cycloid StackForms engine.
+version: 2
+
+# Define the stack configuration form and organize inputs of various types into sections and groups.
+# See: https://docs.staging.cycloid.io/deploy/stackforms/file-format.html
+use_cases:
+- name: default
+  sections:
+  - name: Example section
+    groups:
+    - name: value_ref
+      technologies: [pipeline]
+      vars:
+
+      - name: "Amazon AWS VPC Mapping"
+        key: aws_vpc_mapping
+        widget: dropdown
+        type: map
+        values_ref: https://6f46-2a01-cb00-f9c-df00-3bee-7f0a-ab6-cf57.ngrok-free.app/vpc_mapping?region=eu-west-3
+
