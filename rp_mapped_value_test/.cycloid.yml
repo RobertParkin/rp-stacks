@@ -1,5 +1,5 @@
 # Use the latest version 2 of the Cycloid stack engine.
-version: 3
+version: 2
 name: RP SF dynamic values
 canonical: rp_sf_dynamic_values
 author: '{{ stack_author }}'
