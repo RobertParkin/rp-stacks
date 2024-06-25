@@ -1,6 +1,6 @@
 version: 2
 use_cases:
-  - name: multiselect
+  - name: default
     sections:
       - name: ansible
         groups:
