@@ -13,7 +13,7 @@ author: 'Cycloid'
 image: |
   https://raw.githubusercontent.com/cycloid-community-catalog/stack-dummy/master/icon.png
 technologies:
-  - technology: ansible
+  - technology: terraform
     version: n/a
 
 config:

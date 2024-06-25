@@ -5,7 +5,7 @@ use_cases:
       - name: ansible
         groups:
           - name: database
-            technologies: [ ansible ]
+            technologies: [ terraform ]
             vars:
               - default: [[bar, foo]]
                 description: multiselect array default
