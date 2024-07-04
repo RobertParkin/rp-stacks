@@ -1,7 +1,7 @@
 # Use the latest version 2 of the Cycloid stack engine.
 version: 2
 name: RP SF dynamic values
-canonical: rp_sf_dynamic_values
+canonical: rp_mapped_values_test
 author: '{{ stack_author }}'
 # Fill in the stack details.
 description: 'The bare minimum files to build your stack from scratch.'
