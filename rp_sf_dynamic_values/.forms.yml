@@ -18,7 +18,6 @@ use_cases:
         key: resource_widget_example
         widget: cy_inventory_resource
         type: string
-        required: true
         widget_config:
           attribute: id
           filters:
