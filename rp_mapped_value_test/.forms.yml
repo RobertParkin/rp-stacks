@@ -17,5 +17,5 @@ use_cases:
         key: aws_vpc_mapping
         widget: dropdown
         type: map
-        values_ref: https://6f46-2a01-cb00-f9c-df00-3bee-7f0a-ab6-cf57.ngrok-free.app/vpc_mapping?region=eu-west-3
+        values_ref: https://devs-testing-bucket.s3.eu-west-1.amazonaws.com/backend/values_ref.json
 
