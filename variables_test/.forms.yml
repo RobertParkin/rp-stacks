@@ -12,7 +12,6 @@ use_cases:
         key: message
         widget: simple_text
         type: string
-        default: "hello world and especially to ($ .organization_canonical $)"
       - widget: "dropdown"
         type: "map"
         key: "interpolated_values_ref"
