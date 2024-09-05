@@ -22,9 +22,4 @@ use_cases:
         widget: dropdown
         type: string
         required: true
-        values:
-          options:
-            - condition: ($ .project_owner_canonical $) == 'robert_parkin'
-              values: ["8.0", "5.7"]
-            - condition: ($ .project_owner_canonical $) != 'robert_parkin'
-              values: ["13", "14", "15"]
+
