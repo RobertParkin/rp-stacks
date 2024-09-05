@@ -17,9 +17,4 @@ use_cases:
         key: "interpolated_values_ref"
         name: "Inventory test"
         values_ref: "https://robertparkin.github.io/data/users_($ .project_owner_canonical $).json"
-      - name: Database engine version
-        key: database_engine_version
-        widget: dropdown
-        type: string
-        required: true
 
