@@ -17,7 +17,7 @@ use_cases:
         type: "map"
         key: "interpolated_values_ref"
         name: "Inventory test"
-        values_ref: "https://robertparkin.github.io/data/users_($ project_owner_canonical $).json"
+        values_ref: "https://robertparkin.github.io/data/users_($ .project_owner_canonical $).json"
       - name: Database engine version
         key: database_engine_version
         widget: dropdown
@@ -25,7 +25,7 @@ use_cases:
         required: true
         values:
           options:
-            - condition: ($ project_owner_canonical $) == 'robert_parkin'
+            - condition: ($ .project_owner_canonical $) == 'robert_parkin'
               values: ["8.0", "5.7"]
-            - condition: ($ project_owner_canonical $) != 'robert_parkin'
+            - condition: ($ .project_owner_canonical $) != 'robert_parkin'
               values: ["13", "14", "15"]
