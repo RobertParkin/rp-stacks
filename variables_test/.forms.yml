@@ -1,0 +1,31 @@
+version: "2"
+use_cases:
+- name: default
+  sections:
+  - name: pipeline
+    groups:
+    - name: config
+      technologies: [pipeline]
+      vars:
+      - name: "Message"
+        description: "Message to display in the job"
+        key: message
+        widget: simple_text
+        type: string
+        default: "hello world and especially to ($ .organization_canonical $)"
+      - widget: "dropdown"
+        type: "map"
+        key: "interpolated_values_ref"
+        name: "Inventory test"
+        values_ref: "https://robertparkin.github.io/data/users_($ project_owner_canonical $).json"
+      - name: Database engine version
+        key: database_engine_version
+        widget: dropdown
+        type: string
+        required: true
+        values:
+          options:
+            - condition: ($ project_owner_canonical $) == 'robert_parkin'
+              values: ["8.0", "5.7"]
+            - condition: ($ project_owner_canonical $) != 'robert_parkin'
+              values: ["13", "14", "15"]
