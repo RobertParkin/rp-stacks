@@ -16,5 +16,5 @@ use_cases:
         type: "map"
         key: "interpolated_values_ref"
         name: "Inventory test"
-        values_ref: "https://robertparkin.github.io/data/users_($ .project_owner_canonical $).json"
+        values_ref: "https://robertparkin.github.io/data/users_($ project_owner_canonical $).json"
 
