@@ -23,8 +23,8 @@ use_cases:
         name: "Conditional test"
         values:
           options:
-            - condition: "'($ project_owner_name $)' == 'admin'"
+            - condition: '($ project_owner_name $)' == 'admin'
               values: ["8.0", "5.7"]
-            - condition: "'($ project_owner_name $)' != 'admin'"
+            - condition: '($ project_owner_name $)' != 'admin'
               values: ["13", "14", "15"]
 
