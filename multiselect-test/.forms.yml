@@ -31,15 +31,15 @@ use_cases:
                 widget: dropdown
                 values:
                   options:
-                    - condition: "$os == 'rhel'"
-                    # - condition: "$os == 'Red Hat Linux'"
+                    #- condition: "$os == 'rhel'"
+                    - condition: "$os == 'Red Hat Linux'"
                       values:
                         - label: Red Hat 8.6
                           value: "8.6.0"
                         - label: Red Hat 9.4
                           value: "9.4.0"
-                    - condition: "$os == 'ubuntu'"
-                    # - condition: "$os == 'Ubuntu Linux'"
+                    #- condition: "$os == 'ubuntu'"
+                    - condition: "$os == 'Ubuntu Linux'"
                       values:
                         - label: Ubuntu LTS 20.04
                           value: "20.04"
