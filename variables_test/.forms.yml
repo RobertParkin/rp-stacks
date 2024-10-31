@@ -1,30 +1,30 @@
-version: "2"
+---
 use_cases:
-- name: default
-  sections:
-  - name: pipeline
-    groups:
-    - name: config
-      technologies: [pipeline]
-      vars:
-      - name: "Message"
-        description: "Message to display in the job"
-        key: message
-        widget: simple_text
-        type: string
-      - widget: dropdown
-        type: string
-        key: "interpolated_values_ref"
-        name: "Inventory test"
-        values_ref: "https://robertparkin.github.io/data/users_($ project_owner_name $).json"
-      - widget: dropdown
-        type: string
-        key: "conditional_test"
-        name: "Conditional test"
-        values:
-          options:
-            - condition: "'($ project_owner_name $)' == 'admin'"
-              values: ["8.0", "5.7"]
-            - condition: "'($ project_owner_name $)' != 'admin'"
-              values: ["13", "14", "15"]
+  - name: default
+    sections:
+      - name: Source base image
+        groups:
+          - name: Operating System
+            technologies: [pipeline]
+            vars:
+              - name: Region
+                key: region
+                widget: auto_complete
+                type: string
+                default: "967d166"
 
+              - name: VPC ID
+                key: cycloid_vpc_id
+                widget: dropdown
+                type: map
+                values_ref: https://pastefile.owl.cycloid.io/505c158da992cd3cd031278ab${region}
+                required: true
+
+              - name: Subnets to include in subnet group
+                key: subnet_ids
+                widget: dropdown
+                required: true
+                values_ref: https://pastefile.owl.cycloid.io/${cycloid_vpc_id}
+                type: array
+                widget_config:
+                  multiselect: true
