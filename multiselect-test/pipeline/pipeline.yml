@@ -14,5 +14,7 @@ jobs:
           - -ec
           - |
             echo ${MESSAGE}
+          - |
+            echo "Hello, world!"
         params:
           MESSAGE: ((message))
