@@ -14,15 +14,11 @@ use_cases:
           \ '10.0.1.32/27']"
         key: "locals_public_subnets"
         type: "array"
-        widget: "auto_complete"
-        widget_config:
-          multiselect: true
-        values:
-        - 123
-        validations:
-        - regexp: "[0-9]+"
-          error_message: "The value must in this format: ['10.0.1.0/24', '10.0.2.0/24']"
-      - key: "hello"
+        widget: "text_area"
+        default:
+        - "123"
+        - "hello"
+      - key: "message"
         widget: "simple_text"
         type: "string"
         name: "hello"
