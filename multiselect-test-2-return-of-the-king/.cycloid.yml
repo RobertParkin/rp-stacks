@@ -1,8 +1,8 @@
 ---
 version: 2
 # Configuration of the Cycloid stack
-name: 'Multiselect test'
-canonical: 'multiselect-test'
+name: 'Multiselect test 2 return of the king'
+canonical: 'multiselect-test-2-return-of-the-king'
 status: 'public'
 description: |
   This stack is a dummy stack which contain only a hello world pipeline.
