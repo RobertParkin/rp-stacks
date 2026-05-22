@@ -1,0 +1,17 @@
+version: 2
+name: ENG-148 dropdown auto-select test
+canonical: rp_eng148_test
+author: '{{ stack_author }}'
+description: 'Test stack for ENG-148: verifies that a required dropdown with a single value-mapped option saves correctly.'
+image: https://github.com/cycloidio/bootstrap-stacks/blob/master/blank-sample/thumbnail.png
+template: false
+status: 'private'
+config:
+  default:
+    name: 'Default'
+    pipeline:
+      pipeline:
+        path: 'pipeline/pipeline.yml'
+      variables:
+        path: 'pipeline/variables.sample.yml'
+        destination: '($ .project $)/pipeline/variables-($ .environment $).yml'

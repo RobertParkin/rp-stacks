@@ -1,0 +1,3 @@
+character_set_single: "AA"
+character_set_multi: "AL32UTF8"
+instance_type: "t3.small"

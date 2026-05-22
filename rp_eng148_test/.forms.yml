@@ -1,0 +1,52 @@
+version: "2"
+
+# Test stack for ENG-148: dropdown with type:map, required:true, and a single {label,value}
+# item — previously auto-selected the full object, which the BE rejected with
+# "invalid value type (map[string]interface {}), expected string".
+
+use_cases:
+- name: default
+  sections:
+  - name: Test section
+    groups:
+
+    - name: Bug scenario (single item, auto-selected)
+      technologies: [pipeline]
+      vars:
+
+      - name: "Character set (single option)"
+        description: "Required dropdown with a single value-mapped option — triggers auto-select. This is the ENG-148 bug scenario."
+        key: character_set_single
+        widget: dropdown
+        type: map
+        required: true
+        values:
+        - label: "AL32UTF8/AL16UTF16"
+          value: "AA"
+
+    - name: Comparison cases
+      technologies: [pipeline]
+      vars:
+
+      - name: "Character set (multiple options)"
+        description: "Same widget with multiple options — auto-select does not trigger. Should always work."
+        key: character_set_multi
+        widget: dropdown
+        type: map
+        required: true
+        values:
+        - label: "AL32UTF8/AL16UTF16"
+          value: "AA"
+        - label: "UTF8"
+          value: "AL32UTF8"
+        - label: "UTF16"
+          value: "AL16UTF16"
+
+      - name: "Instance type (optional, single option)"
+        description: "Optional dropdown with a single value-mapped option — auto-select does not trigger. Should always work."
+        key: instance_type
+        widget: dropdown
+        type: map
+        values:
+        - label: "Small"
+          value: "t3.small"

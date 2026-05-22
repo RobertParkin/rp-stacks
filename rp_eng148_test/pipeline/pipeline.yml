@@ -1,0 +1,18 @@
+jobs:
+- name: example-job
+  build_logs_to_retain: 12
+  plan:
+  - task: example-task
+    config:
+      platform: linux
+      image_resource:
+        type: registry-image
+        source: { repository: busybox }
+      params:
+        CHARACTER_SET: ((character_set_single))
+      run:
+        path: sh
+        args:
+        - -ec
+        - |
+          echo "Character set value: $CHARACTER_SET"
