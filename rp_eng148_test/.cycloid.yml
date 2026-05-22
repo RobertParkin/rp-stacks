@@ -1,4 +1,4 @@
-version: 2
+version: '4'
 name: ENG-148 dropdown auto-select test
 canonical: rp_eng148_test
 author: '{{ stack_author }}'
@@ -14,4 +14,4 @@ config:
         path: 'pipeline/pipeline.yml'
       variables:
         path: 'pipeline/variables.sample.yml'
-        destination: '($ .project $)/pipeline/variables-($ .environment $).yml'
+        destination: '($ .config_root $)/pipeline/variables.yml'
